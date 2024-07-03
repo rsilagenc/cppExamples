@@ -19,13 +19,12 @@ struct Contacts
     std::vector<Contact> contacts;
     void addContact(const Contact &contact)
     {
-        for (const auto &contact : contacts)
-            contacts.push_back(contact);
+        contacts.push_back(contact);
     }
 
     void viewContacts()
     {
-        std::cout << "Contacts: ";
+        std::cout << "Contact Info: \n";
         for (const auto &contact : contacts)
         {
             std::cout << "Name: " << contact.name << ", Email: " << contact.mail << ", Phone: " << contact.phoneNumber
@@ -59,11 +58,6 @@ int main()
     myContacts.addContact(newContact);
 
     myContacts.viewContacts();
-
-    std::cout << "Contact Name: " << newContact.name << std::endl;
-    std::cout << "Contact Mail: " << newContact.mail << std::endl;
-    std::cout << "Contact Phone Number: " << newContact.phoneNumber << std::endl;
-
     return 0;
 }
 // Implement the functions here

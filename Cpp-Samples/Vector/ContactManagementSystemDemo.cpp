@@ -31,12 +31,22 @@ struct Contacts
                       << std::endl;
         }
     }
+
+    void deleteContact()
+    {
+        contacts.erase(contacts.begin(), contacts.end());
+        std::cout << "Contact deleted. \n";
+    }
+
+    void searchContact()
+    {
+    }
 };
 
 // Function prototypes
-void addContact(std::vector<Contact> &contact);
-void viewContacts(const std::vector<Contact> &contact);
-void deleteContact(std::vector<Contact> &contact);
+// void addContact(std::vector<Contact> &contact);
+// void viewContacts(const std::vector<Contact> &contact);
+// void deleteContact(std::vector<Contact> &contact);
 void searchContact(const std::vector<Contact> &contact);
 void displayMenu();
 
@@ -58,6 +68,9 @@ int main()
     myContacts.addContact(newContact);
 
     myContacts.viewContacts();
+
+    myContacts.deleteContact();
+
     return 0;
 }
 // Implement the functions here
